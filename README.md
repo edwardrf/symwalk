@@ -11,7 +11,7 @@ The main difference is this Walk implementation will not visit the same director
 than once even if there is a symbolic link loop.
 This is achieved by 
  - always evaluate the symbolic links to its real path by filepath.EvalSymlinks, this means your walk function will received the real path instead of the relative path from the symbolic links
- - keep record of all visisted directories using a map
+ - keep record of all visited directories using a map
 
 Since the underlying implementation make use of filepath.Walk, the rest of the behavior is the same as filepath.Walk.
 
